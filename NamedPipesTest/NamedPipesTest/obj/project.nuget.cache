@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zaR/iIN1Bka1R2jy/9mHHK9sV9BY8KQqbstpPluSPY5yrTRT39XR4S6Z8ThIiZ3sWra0adXwcgxLXY8YcUURzA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fcu\\Documents\\Projects\\NamedPipesTest\\NamedPipesTest\\NamedPipesTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fcu\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}

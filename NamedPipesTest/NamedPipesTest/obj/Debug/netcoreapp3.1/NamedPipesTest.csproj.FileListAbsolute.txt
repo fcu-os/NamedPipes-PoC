@@ -1,0 +1,13 @@
+C:\Users\fcu\Documents\Projects\NamedPipesTest\NamedPipesTest\bin\Debug\netcoreapp3.1\NamedPipesTest.exe
+C:\Users\fcu\Documents\Projects\NamedPipesTest\NamedPipesTest\bin\Debug\netcoreapp3.1\NamedPipesTest.deps.json
+C:\Users\fcu\Documents\Projects\NamedPipesTest\NamedPipesTest\bin\Debug\netcoreapp3.1\NamedPipesTest.runtimeconfig.json
+C:\Users\fcu\Documents\Projects\NamedPipesTest\NamedPipesTest\bin\Debug\netcoreapp3.1\NamedPipesTest.runtimeconfig.dev.json
+C:\Users\fcu\Documents\Projects\NamedPipesTest\NamedPipesTest\bin\Debug\netcoreapp3.1\NamedPipesTest.dll
+C:\Users\fcu\Documents\Projects\NamedPipesTest\NamedPipesTest\bin\Debug\netcoreapp3.1\NamedPipesTest.pdb
+C:\Users\fcu\Documents\Projects\NamedPipesTest\NamedPipesTest\obj\Debug\netcoreapp3.1\NamedPipesTest.csprojAssemblyReference.cache
+C:\Users\fcu\Documents\Projects\NamedPipesTest\NamedPipesTest\obj\Debug\netcoreapp3.1\NamedPipesTest.AssemblyInfoInputs.cache
+C:\Users\fcu\Documents\Projects\NamedPipesTest\NamedPipesTest\obj\Debug\netcoreapp3.1\NamedPipesTest.AssemblyInfo.cs
+C:\Users\fcu\Documents\Projects\NamedPipesTest\NamedPipesTest\obj\Debug\netcoreapp3.1\NamedPipesTest.csproj.CoreCompileInputs.cache
+C:\Users\fcu\Documents\Projects\NamedPipesTest\NamedPipesTest\obj\Debug\netcoreapp3.1\NamedPipesTest.dll
+C:\Users\fcu\Documents\Projects\NamedPipesTest\NamedPipesTest\obj\Debug\netcoreapp3.1\NamedPipesTest.pdb
+C:\Users\fcu\Documents\Projects\NamedPipesTest\NamedPipesTest\obj\Debug\netcoreapp3.1\NamedPipesTest.genruntimeconfig.cache
