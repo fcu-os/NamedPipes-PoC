@@ -4,43 +4,29 @@ using System.IO.Pipes;
 using System.Threading;
 
 namespace NamedPipesTest {
+
     class NamedPipeClient {
 
-        internal static void Launch(string pipeName) {
-            using (var pipeClient = new NamedPipeClientStream(serverName: ".", pipeName, PipeDirection.InOut)) {
-                Console.WriteLine($"Client '{pipeName}' is launched...\n");
-                
-                const int connectionTimeoutMilliseconds = 8000;
-                if (!pipeClient.IsConnected) {
-                    Thread.Sleep(4000);
-                    pipeClient.Connect(connectionTimeoutMilliseconds);
-                }
+        internal static (string pipeName, string pingResponse) Launch(string pipeName) {
+            using var pipeClient = new NamedPipeClientStream(".", pipeName, PipeDirection.InOut);
+            using var reader = new StreamReader(pipeClient);
+            using var writer = new StreamWriter(pipeClient);
 
-                Console.WriteLine($"Client '{pipeName}' is connected!\n");
-
-                using var reader = new StreamReader(pipeClient);
-                using var writer = new StreamWriter(pipeClient);
-
-                var running = true;
-                while (running) {
-                    Thread.Sleep(4000);
-
-                    var messageFromServer = reader.ReadLine();
-                    if (messageFromServer != null) {
-                        Console.WriteLine($"Client '{pipeName}' received from server: '{messageFromServer}'\n");
-                        switch (messageFromServer) {
-                            case Program.PingMessage:
-                                writer.WriteLine("YES");
-                                writer.Flush();
-                                break;
-                            case "quit":
-                                running = false;
-                                break;
-                        }
-                    }
-                }
+            if (!pipeClient.IsConnected) {
+                pipeClient.Connect();
+                Console.WriteLine($"Client '{pipeName}' is now connected...\n");
             }
-            Console.WriteLine("Client Quits");
+
+            writer.WriteLine(Program.PingMessage);
+            writer.Flush();
+            Console.WriteLine($"Client '{pipeName}' sends a ping...\n");
+
+            pipeClient.WaitForPipeDrain();
+
+            var pingResponse = reader.ReadLine();
+            Console.WriteLine($"Client '{pipeName}' got response from ping: '{pingResponse}'\n");
+
+            return (pipeName, pingResponse);
         }
     }
 }
